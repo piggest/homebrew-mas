@@ -9,6 +9,11 @@ cask "mas" do
 
   app "Mas.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Mas.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.example.Mas.plist",
   ]
