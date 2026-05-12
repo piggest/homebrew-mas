@@ -1,6 +1,6 @@
 cask "mas" do
-  version "4.3.1"
-  sha256 "698cd3f6edc87987481029b2cfa891484bb8429161259a46f1619bbd5660b800"
+  version "5.0.0"
+  sha256 "204eab272996ac7268c749d5e2880ba52ec6ff3b0e7f1f76b8fd6161488c6bcd"
 
   url "https://github.com/piggest/Mas/releases/download/v#{version}/Mas-v#{version}.dmg"
   name "Mas"
@@ -9,12 +9,8 @@ cask "mas" do
 
   app "Mas.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/Mas.app"]
-  end
-
   zap trash: [
+    "~/Library/Preferences/com.piggest.mas.plist",
     "~/Library/Preferences/com.example.Mas.plist",
   ]
 end
