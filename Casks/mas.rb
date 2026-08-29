@@ -1,6 +1,6 @@
 cask "mas" do
-  version "5.3.0"
-  sha256 "aae215dbb091a892e4186839bf85f7afa8e406cea4de70ddb1d9aa912aa0f310"
+  version "5.4.0"
+  sha256 "a63e6924769cad40aa97836436bc32f217ee9cde819050388132a01d6c7963f8"
 
   url "https://github.com/piggest/Mas/releases/download/v#{version}/Mas-v#{version}.dmg"
   name "Mas"
